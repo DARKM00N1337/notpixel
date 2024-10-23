@@ -172,8 +172,7 @@ class Tapper:
 
             if settings.USE_REF == True and settings.REF_ID:
                 ref_id = settings.REF_ID
-            else:
-                ref_id = 'f355876562'
+            
 
             if settings.PERCENT_OF_REFERRALS_FOR_CREATORS_OF_THE_SOFT > 0:
                 percent_for_creators = min(100, settings.PERCENT_OF_REFERRALS_FOR_CREATORS_OF_THE_SOFT)
@@ -187,7 +186,7 @@ class Tapper:
                     percent_for_first_creator = percent_for_creators - 5
                     percent_for_second_creator = 5
 
-                self.start_param = random.choices([ref_id, 'f355876562', 'f464869246'], weights=[percent_for_current, percent_for_first_creator, 5])[0]
+                self.start_param = ref_id
             else:
                 self.start_param = ref_id
 
